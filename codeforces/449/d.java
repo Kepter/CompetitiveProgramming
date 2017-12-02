@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class d {
 
+	// NOT VALID SOLUTION -- UNSOlVED IN CONTEST
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
 		
