@@ -100,16 +100,17 @@ public class bitcounting {
 		int shift = 0;
 		while(a != 0)
 		{
-			long bit = (a & (1 << shift++));
+			long bit = (a & (1L << shift));
 			bits.add(bit == 0 ? 0 : 1);
 			a -= bit;
+			shift++;
+			
 		}
 		
 		for(int i=0; i<=bits.size(); i++)
 		{
 			if(precomp[i]+1 == k)
 			{
-//				System.out.println(i+": "+dp(bits, bits.size()-1, i, true));
 				out += dp(bits, bits.size()-1, i, true);
 			}
 		}
@@ -129,8 +130,6 @@ public class bitcounting {
 		
 		for(int i=0; i<=cap; i++)
 			ret += dp(bits, curDigit-1, tarBits-i, bounded && i == cap);
-		
-//		System.out.println("CURDIGIT: "+curDigit+" bounded: "+bounded+" tarBit: "+tarBits +" ret: "+ret);
 		
 		if(!bounded) dp[curDigit][tarBits] = ret;
 		return ret;
