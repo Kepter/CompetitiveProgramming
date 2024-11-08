@@ -1,0 +1,1 @@
+This repository stores my solutions to various competitive programming problems and puzzles that have been accumulated over the years. Solutions are in a variety of languages including C++, Java, and Python. They are categorized into folders based on the site or source of the problems, each file is a solution to a specific problem.
